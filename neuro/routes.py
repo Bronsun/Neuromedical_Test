@@ -44,7 +44,6 @@ def day1():
         db.session.add(answer)
         db.session.commit()
         message = "Odpowiedz została wysłana !"
-        return redirect(url_for('main'))
     return render_template('day1.html',form=form,message=message)
 
 
