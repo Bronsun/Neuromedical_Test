@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    
+    <title>Wybór dnia</title>
+    
+</head>
+
+<body action='/main'>
+    <div class="top">
+    
+    <div class='instruction'>
+    <h1>Instrukcja</h1>
+    <p>Aby rozpocząć test wybierz dzień pierwszy. Po wciśnięciu przycisku rozpocznie się test. Test składa się z 12 słów do zapamiętania oraz 5 prostych zadań matematycznych. Po ukończonym teście nalezy wypisać wszystkie słowa, które się zapamiętało do formularza i nacisnąć przycisk wyślij. Pamiętaj aby się wylogować po skończonym teście !!!</p>
+    </div>
+    </div>
+    <div class="days">
+        <div class='day'>
+        <p>Dzień pierwszy</p>
+        <a href="/day1"><input class="btn" type="submit" value="Rozpocznij test"></a>
+        </div>
+        <div class='day'>
+        <p>Dzień drugi</p>
+        <a href="/day2"><input class="btn" type="submit" value="Rozpocznij test"></a>
+        </div>
+        <div class='day'>
+        <p>Dzień trzeci</p>
+        <a href="/day3"> <input class="btn" type="submit" value="Rozpocznij test"></a>
+        </div>
+        <div class='day'>
+        <p>Dzień czwarty</p>
+        <a href="/day4"> <input class="btn" type="submit" value="Rozpocznij test"></a>
+        </div>
+        <div class='day'>
+        <p>Dzień piąty</p>
+        <a href="/day5"> <input class="btn" type="submit" value="Rozpocznij test"></a>
+        </div>
+        <div class='day'>
+        <p>Dzień szósty</p>
+        <a href="/day6"><input class="btn" type="submit" value="Rozpocznij test"></a>
+        </div>
+        <div class='day'>
+        <p>Dzień siódmy</p>
+        <a href="/day7"> <input class="btn" type="submit" value="Rozpocznij test"></a>
+        </div>
+    </div>
+    <div class='logoutbtn'>
+    <a href='/logout'><input class="btn" type="submit" value="Wyloguj się"></a>
+    </div>
+</body>
+
+</html>

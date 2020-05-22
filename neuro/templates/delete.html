@@ -1,0 +1,28 @@
+{% extends "admin.html" %}
+{% block content %}
+<div class = "content">
+    <form method="POST" action="/delete">
+        {{ form.hidden_tag() }}
+        
+            <div class = "form">
+                {% if form.username.errors %}
+                {% for error in form.username.errors %}
+                {{ form.username(class="form-control",placeholder="Nazwa użytkownika")}}
+                <p>{{ error }}</p>
+                {% endfor%}
+                {% else %}
+                {{ form.username(class="form-control",placeholder="Nazwa użytkownika")}}
+                {% endif %}
+                
+            </div>
+            <div class = "form">
+                {{ form.confirm_username(class="form-control",placeholder="Powtórz nazwę użytkownika")}}
+            </div>
+            
+            <div class = 'form'>
+                {{ form.submit(class='btn')}}
+            </div>
+            {% if error %}
+            <p>{{ error }}</p>
+            {% endif %}
+{% endblock content %}

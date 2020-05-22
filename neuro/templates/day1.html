@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='day.css') }}">
+
+    <title>Wybór dnia</title>
+    
+</head>
+
+<body>
+    <div class="container">
+       
+        <div id="test">
+            TEST
+        </div> 
+        
+        <button id="startbtn" onclick="anim();callInterval()">Start</button>
+        <form method="POST" action="/day1">
+            {{ form.hidden_tag() }}
+        <div class = "submit">
+            {{ form.answer (id="form",placeholder="Odpowiedź") }}
+        </div>
+       
+        <div class="submit">
+            {{ form.submit(id="subbtn") }}
+        {% if message %}
+        <p>{{ message }}</p>
+        {% endif %} 
+    </div>
+    </form>
+    <a href="/main"><button id="startbtn">Wróć na stronę główną</button></a>
+    
+</div>  
+<script>
+var arr = ["Kot","Pies","Miłosz","Ząb","Miłość","Jedzenie","Zuza"]; 
+var i = 0;
+var interval = 3000
+var form = document.getElementById('form')
+var submit = document.getElementById('subbtn')
+var test =document.getElementById('test')
+form.style.display="none"
+submit.style.display="none"
+function callInterval() {
+// set a variable for setInterval
+	var time = setInterval(()=>{
+
+		test.innerHTML=arr[i];
+		i++; 
+		if(i==arr.length){
+			this.clearInterval(time);
+            test.innerHTML = "Koniec testu. Wprowadz to co zapamiętałeś w ponizszy formularz."
+            form.style.display="unset"
+            submit.style.display = "unset"
+		}
+		}, interval);
+}
+var count = 4;
+var startbtn = document.getElementById("startbtn")
+
+function anim() {
+    if (count > 0) {
+        
+        startbtn.innerHTML = count
+        count--;
+        setTimeout(anim, 700);
+    }
+    else if (count ==1) {
+       
+        callInterval();
+    }
+    else{
+        startbtn.style.display = "none"
+    }
+}
+
+
+</script>
+
+
+
+
+
+</body>
+
+</html>

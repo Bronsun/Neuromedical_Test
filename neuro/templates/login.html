@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+    <title>Test</title>
+</head>
+<body>
+   
+    <div class = "content">
+        <form method="POST" action="/login">
+            {{ form1.hidden_tag() }}
+            
+                <legend class="legend-text">Zaloguj się</legend>
+                <div class = "form">
+                    {{ form1.username(class="form-control",placeholder="Login")}}
+                </div>
+                <div class = "form">
+                    {{ form1.password(class="form-control",placeholder="Hasło")}}
+                </div>
+            
+            <div class = 'form'>
+                {{ form1.submit(class='btn')}}
+            </div>
+            {% if error %}
+            <p>{{ error }}</p>
+            {% endif %}
+        </form>
+    </div>
+</body>
+</html>

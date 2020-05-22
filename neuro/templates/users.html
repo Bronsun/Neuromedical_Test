@@ -1,0 +1,16 @@
+{% extends "admin.html" %}
+{% block content %}
+{% for user in users %}
+
+<div class="contentUsers">
+    <div class="Userbox">
+    <div class="login">Login: {{user.username}}</div>
+    <div class="passwordUser"> Hasło: {{user.password}}</div> 
+    <div class="AnswersDays">Day1:  Day2:  Day3:  Day4:  Day5:  Day6:  Day7: </div>
+    <div class="answers">XDD XDD XDD XDD XDD XDD XDD</div>
+</div>
+    
+</div>
+
+{% endfor %}
+{% endblock content %}

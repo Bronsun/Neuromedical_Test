@@ -1,0 +1,25 @@
+{% extends "admin.html" %}
+{% block content %}
+<div class = "content">
+    <form method="POST" action="/add">
+        {{ form.hidden_tag() }}
+            <div class = "form">
+                
+                {{ form.username(class="form-control",placeholder="Nazwa użytkownika")}}
+            </div>
+            <div class = "form">
+                {{ form.password(class="form-control",placeholder="Hasło")}}
+            </div>
+            <div class = "form">
+                {{ form.confirm_password(class="form-control",placeholder="Powtórz Hasło")}}
+            </div>
+       
+        <div class = 'form'>
+            {{ form.submit(class='btn')}}
+        </div>
+        {% if error %}
+        <p>{{ error }}</p>
+        {% endif %}
+    </form>
+</div>
+{% endblock content %}
