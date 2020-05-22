@@ -19,8 +19,8 @@ class User(db.Model,UserMixin):
 class Answer(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     date_posted = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
-    content = db.Column(db.Text, nullable=False)
+    day = db.Column(db.Text, nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
 
     def __repr__(self):
-        return f"Post('{self.content}', '{self.date_posted}')"
+        return f"Post( '{self.date_posted}')"

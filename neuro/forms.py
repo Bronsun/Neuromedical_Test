@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, PasswordField, SubmitField, BooleanField
+from wtforms import StringField, PasswordField, SubmitField, BooleanField,TextAreaField
 from wtforms.validators import DataRequired,Length,Email,EqualTo, ValidationError
 from neuro.modules import User
 
@@ -20,7 +20,7 @@ class LoginForm(FlaskForm):
     submit = SubmitField('Zaloguj')
 
 class AnswerForm(FlaskForm):
-    answer = StringField('Odpowiedz')
+    answer = TextAreaField('Odpowiedz')
     submit = SubmitField('Wyślij odpowiedź')
 
 class DeleteForm(FlaskForm):
