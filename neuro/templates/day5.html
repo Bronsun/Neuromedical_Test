@@ -10,14 +10,14 @@
 </head>
 
 <body>
-    <div class="container" >
+    <div class="container">
        
         <div id="test">
             TEST
         </div> 
         
         <button id="startbtn" onclick="anim();callInterval()">Start</button>
-        <form method="POST" action="/day1">
+        <form method="POST" action="/day5">
             {{ form.hidden_tag() }}
         <div class = "submit">
             {{ form.answer (id="form",placeholder="Odpowiedź") }}
@@ -33,9 +33,8 @@
     <a href="/main"><button id="startbtn">Wróć na stronę główną</button></a>
     <div id="prompt" ><input id="mathanswer" placeholder="Wprowadz rozwiązanie "><button id="okbtn" onclick='callInterval()'">OK</button></div>
 </div>  
-
 <script>
-var arr = ["Kot","Pies","Samochód","Wypadek","Miłość","Jedzenie","Element","Ziemniak","Tulipan","Rower","Człowiek","Komputer","12*5","14+5","255+9","12+23*2","22-15","32/8","43+5"]; 
+var arr = ["Kot","Pies","Samochód","Wypadek","Miłość","Jedzenie","Element","12*5","14+5","255+9"]; 
 var i = 0;
 var interval = 3000
 var form = document.getElementById('form')
@@ -50,20 +49,19 @@ function callInterval() {
 // set a variable for setInterval
 	var time = setInterval(()=>{
 		test.innerHTML=arr[i];
-        if (i > 11){
+        if (i > 7){
+            
             interval=300;
             this.clearInterval(time);
             prompt.style.display="block"
-            
-            
             //var matma = prompt("Wpisz wynik działania matemtycznego")
             // tutaj wstaw instrukcje kiedy ktos cos zle wpisac i nie dawaj kochanie i++
             if (i > arr.length -1){
                 this.clearInterval(time);
-                test.innerHTML = "Koniec testu. Wprowadź to co zapamiętałeś w poniższy formularz."
+                test.innerHTML = "Koniec testu. Wprowadz to co zapamiętałeś w ponizszy formularz."
                 form.style.display="unset"
-                submit.style.display = "unset"
-                prompt.style.display="none"  
+                submit.style.display = "unset"  
+                prompt.style.display="none"
             } 
         }
         i++;
@@ -89,9 +87,12 @@ function anim() {
     }
 }
 
-
-
-
 </script>
+
+
+
+
+
 </body>
+
 </html>

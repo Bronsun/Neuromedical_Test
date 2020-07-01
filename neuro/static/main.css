@@ -7,7 +7,7 @@
 }
 
 body{
-    background-color: #DA5C5C;
+    background-color: #ecfcff;
     font-family: Arial;
 }
 .top{
@@ -32,6 +32,7 @@ body{
 .days{
     text-align: center;
     margin-top: 5vh;
+    font-weight: 700;
     
 }
 .day{

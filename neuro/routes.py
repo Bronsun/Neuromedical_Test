@@ -7,6 +7,7 @@ from flask_login import login_user, current_user, logout_user,login_required
 ############### LOGIN PAGE #############################
 @app.route("/")
 @app.route('/login',methods=['GET','POST'])
+
 def login():
     if current_user.is_authenticated:
         return redirect(url_for('main'))
@@ -40,29 +41,83 @@ def day1():
     message=None
     form = AnswerForm()
     if form.validate_on_submit():
-        answer = Answer(day=form.answer.data, author=current_user)
+        answer = Answer(day1="Dzień 1, "+form.answer.data, author=current_user)
         db.session.add(answer)
         db.session.commit()
         message = "Odpowiedz została wysłana !"
     return render_template('day1.html',form=form,message=message)
 
+@app.route('/day2',methods=['POST','GET'])
+@login_required
+def day2():
+    message=None
+    form = AnswerForm()
+    if form.validate_on_submit():
+        answer = Answer(day1="Dzień 2, "+form.answer.data, author=current_user)
+        db.session.add(answer)
+        db.session.commit()
+        message = "Odpowiedz została wysłana !"
+    return render_template('day2.html',form=form,message=message)
 
+@app.route('/day3',methods=['POST','GET'])
+@login_required
+def day3():
+    message=None
+    form = AnswerForm()
+    if form.validate_on_submit():
+        answer = Answer(day1="Dzień 3, "+form.answer.data, author=current_user)
+        db.session.add(answer)
+        db.session.commit()
+        message = "Odpowiedz została wysłana !"
+    return render_template('day3.html',form=form,message=message)
 
+@app.route('/day4',methods=['POST','GET'])
+@login_required
+def day4():
+    message=None
+    form = AnswerForm()
+    if form.validate_on_submit():
+        answer = Answer(day1="Dzień 4, "+form.answer.data, author=current_user)
+        db.session.add(answer)
+        db.session.commit()
+        message = "Odpowiedz została wysłana !"
+    return render_template('day4.html',form=form,message=message)
 
+@app.route('/day5',methods=['POST','GET'])
+@login_required
+def day5():
+    message=None
+    form = AnswerForm()
+    if form.validate_on_submit():
+        answer = Answer(day1="Dzień 5, "+form.answer.data, author=current_user)
+        db.session.add(answer)
+        db.session.commit()
+        message = "Odpowiedz została wysłana !"
+    return render_template('day5.html',form=form,message=message)
 
+@app.route('/day6',methods=['POST','GET'])
+@login_required
+def day6():
+    message=None
+    form = AnswerForm()
+    if form.validate_on_submit():
+        answer = Answer(day1="Dzień 6, "+form.answer.data, author=current_user)
+        db.session.add(answer)
+        db.session.commit()
+        message = "Odpowiedz została wysłana !"
+    return render_template('day6.html',form=form,message=message)
 
-
-
-
-
-
-
-
-
-
-
-
-
+@app.route('/day7',methods=['POST','GET'])
+@login_required
+def day7():
+    message=None
+    form = AnswerForm()
+    if form.validate_on_submit():
+        answer = Answer(day1="Dzień 7, "+form.answer.data, author=current_user)
+        db.session.add(answer)
+        db.session.commit()
+        message = "Odpowiedz została wysłana !"
+    return render_template('day7.html',form=form,message=message)
 
 
 
@@ -100,11 +155,30 @@ def delete():
     return render_template('delete.html',form=form)
 
 
-@app.route('/users')
+@app.route('/users',methods =["GET"])
 def users():
     users = User.query.all()
     
-    return render_template('users.html',users=users)
+    for user in users:
+        x = user.answers
+        for answer in x:
+            useranswer=(answer.day1)
+            answer_arry=useranswer.split(",")
+            
+            if (answer_arry[0]=="Dzień 1"):
+                correctDay1 = [" xdd","ziemniak","polonez","gitara","samochód","melanz"]    
+                a = set(answer_arry)
+                b = set(correctDay1)
+                result1=len(a&b)
+                
+            elif (answer_arry[0]=="Dzień 2"):
+                a = set(answer_arry)
+                b = set(correctDay1)
+                result2 = len(a&b)
+                
+    
+
+    return render_template('users.html',users=users,result1=result1)
 
 
 ######## LOGOUT ###########

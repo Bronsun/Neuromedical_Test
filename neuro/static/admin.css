@@ -3,7 +3,7 @@
     margin: 0;
 }
 body{
-  background-color: #DA5C5C;
+  background-color: #ecfcff;
   font-family: Arial;
   
 }
@@ -27,6 +27,7 @@ body{
     height: 10vh;
     margin-left: 5vw;
     border-radius: 10px;
+    border:solid 2px black;
     
     
 }
@@ -43,6 +44,7 @@ body{
     margin-top:-55vh;
     padding: 5vw;
     border-radius: 10px;
+   
 }
 .form-control-label{
     margin-top:1vw;
@@ -93,14 +95,46 @@ body{
     }
 
     .contentUsers{
-        display: grid;
-        grid-template-columns: 1fr;
+        
         grid-template-rows: auto;
         max-width: 40vw;
         padding: 3vw;
         transform: translate(45vw, -80vh);
-        background-color: white;
         margin-top: 10px;
+        background-color: white;
         border-radius: 10px;
+        border: solid 2px black;
+       
+    }
+    .Userbox{
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        font-size: 1.5vw;
+        font-weight: 700;
+        
+        text-align: center;
+        padding: 10px;
+    }
+    .AnswersDays{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        font-weight: 700;
+        
+    }
+    .answers{
+        font-weight: 300 !important;
+        padding: 10px;
+    }
+
+    .correct{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr  ;
+        grid-template-rows: 1fr 1fr;
+        font-weight: 700;
+    }
+    .daynumbers{
+        grid-row: 1/span 1;
     }
     
