@@ -45,6 +45,6 @@ Day7 : 9/12
 ### How to access admin page (FAST)
 Just type in your browser
 ```
-127.0.0.1:5000/admin
+127.0.0.1:5000/admin2551
 ```
 XDDD
