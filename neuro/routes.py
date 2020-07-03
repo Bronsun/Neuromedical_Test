@@ -44,7 +44,7 @@ def day1():
         answer = Answer(day1="Dzień 1, "+form.answer.data, author=current_user)
         db.session.add(answer)
         db.session.commit()
-        message = "Odpowiedz została wysłana !"
+        message = "Odpowiedz została wysłana!"
     return render_template('day1.html',form=form,message=message)
 
 @app.route('/day2',methods=['POST','GET'])
@@ -56,7 +56,7 @@ def day2():
         answer = Answer(day1="Dzień 2, "+form.answer.data, author=current_user)
         db.session.add(answer)
         db.session.commit()
-        message = "Odpowiedz została wysłana !"
+        message = "Odpowiedz została wysłana!"
     return render_template('day2.html',form=form,message=message)
 
 @app.route('/day3',methods=['POST','GET'])
@@ -68,7 +68,7 @@ def day3():
         answer = Answer(day1="Dzień 3, "+form.answer.data, author=current_user)
         db.session.add(answer)
         db.session.commit()
-        message = "Odpowiedz została wysłana !"
+        message = "Odpowiedz została wysłana!"
     return render_template('day3.html',form=form,message=message)
 
 @app.route('/day4',methods=['POST','GET'])
@@ -80,7 +80,7 @@ def day4():
         answer = Answer(day1="Dzień 4, "+form.answer.data, author=current_user)
         db.session.add(answer)
         db.session.commit()
-        message = "Odpowiedz została wysłana !"
+        message = "Odpowiedz została wysłana!"
     return render_template('day4.html',form=form,message=message)
 
 @app.route('/day5',methods=['POST','GET'])
@@ -92,7 +92,7 @@ def day5():
         answer = Answer(day1="Dzień 5, "+form.answer.data, author=current_user)
         db.session.add(answer)
         db.session.commit()
-        message = "Odpowiedz została wysłana !"
+        message = "Odpowiedz została wysłana!"
     return render_template('day5.html',form=form,message=message)
 
 @app.route('/day6',methods=['POST','GET'])
@@ -104,7 +104,7 @@ def day6():
         answer = Answer(day1="Dzień 6, "+form.answer.data, author=current_user)
         db.session.add(answer)
         db.session.commit()
-        message = "Odpowiedz została wysłana !"
+        message = "Odpowiedz została wysłana!"
     return render_template('day6.html',form=form,message=message)
 
 @app.route('/day7',methods=['POST','GET'])
@@ -116,7 +116,7 @@ def day7():
         answer = Answer(day1="Dzień 7, "+form.answer.data, author=current_user)
         db.session.add(answer)
         db.session.commit()
-        message = "Odpowiedz została wysłana !"
+        message = "Odpowiedz została wysłana!"
     return render_template('day7.html',form=form,message=message)
 
 
@@ -150,8 +150,7 @@ def delete():
             db.session.delete(user)
             db.session.commit()
             error="Uzytkownik został usunięty"
-    return render_template('delete.html',form=form,error=error)
-        
+        return render_template('delete.html',form=form,error=error)
     return render_template('delete.html',form=form)
 
 
