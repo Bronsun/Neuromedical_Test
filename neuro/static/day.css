@@ -24,8 +24,7 @@ body{
     font-size: 7vh;
     max-height: 20vh;
     padding-top: 6.5vh;
-    padding-bottom:6.5vh;
-    
+    padding-bottom:6.5vh;  
 }
 #startbtn, #backbtn, #okbtn, #subbtn{
     border: 2px solid transparent;
@@ -101,8 +100,7 @@ body{
     font-size: 2.2vh;
     text-decoration: none;
     border-radius: 10px;
-    text-align: center;
-   
+    text-align: center;  
 }
 #mathanswer:focus, #form:focus{
     border: 2px solid #DA5C5C;
@@ -112,4 +110,58 @@ body{
 .mess_sent{
     color: #d8dadd;
     font-size: 4vh;
+}
+@media(max-width:1024px)
+{
+    *:hover{
+        cursor:none;
+    }
+    #test{
+        width: 80%;
+        -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+        font-size: 6vh; 
+    }
+    #startbtn, #backbtn, #okbtn, #subbtn{
+        width: 40vw;
+    }
+    #startbtn, #subbtn{
+        font-size: 4vh;
+        height: 6vh;
+    }
+    #backbtn{
+        font-size: 2.5vh;
+        height: 4.5vh;
+        width:60vw;
+    }
+    #okbtn{
+        width: 18vw;
+        height: 6vh;
+        margin: 6vh auto;
+        font-size:4vh;
+    }
+    #subbtn{
+        margin-top: -1vh;
+        width: 70vw;
+    }
+    #form{
+        font-size: 3vh;
+        width: 80vw;
+        height: 40vh;
+    }
+    
+    #prompt{
+        width: 80%;
+        padding: 10px;
+        margin: 5vh auto;
+    }
+    
+    #mathanswer{
+        width: 80%;
+        height: 8vh;
+        padding: 0.8vw;
+        margin: 5vh auto 0;
+        font-size: 2.5vh; 
+    }
 }
