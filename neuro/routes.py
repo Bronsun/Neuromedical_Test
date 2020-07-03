@@ -41,7 +41,7 @@ def day1():
     message=None
     form = AnswerForm()
     if form.validate_on_submit():
-        answer = Answer(day1="Dzień 1, "+form.answer.data, author=current_user)
+        answer = Answer(day1="Dzień 1: "+form.answer.data, author=current_user)
         db.session.add(answer)
         db.session.commit()
         message = "Odpowiedz została wysłana!"
@@ -53,7 +53,7 @@ def day2():
     message=None
     form = AnswerForm()
     if form.validate_on_submit():
-        answer = Answer(day1="Dzień 2, "+form.answer.data, author=current_user)
+        answer = Answer(day1="Dzień 2: "+form.answer.data, author=current_user)
         db.session.add(answer)
         db.session.commit()
         message = "Odpowiedz została wysłana!"
@@ -65,7 +65,7 @@ def day3():
     message=None
     form = AnswerForm()
     if form.validate_on_submit():
-        answer = Answer(day1="Dzień 3, "+form.answer.data, author=current_user)
+        answer = Answer(day1="Dzień 3: "+form.answer.data, author=current_user)
         db.session.add(answer)
         db.session.commit()
         message = "Odpowiedz została wysłana!"
@@ -77,7 +77,7 @@ def day4():
     message=None
     form = AnswerForm()
     if form.validate_on_submit():
-        answer = Answer(day1="Dzień 4, "+form.answer.data, author=current_user)
+        answer = Answer(day1="Dzień 4: "+form.answer.data, author=current_user)
         db.session.add(answer)
         db.session.commit()
         message = "Odpowiedz została wysłana!"
@@ -89,7 +89,7 @@ def day5():
     message=None
     form = AnswerForm()
     if form.validate_on_submit():
-        answer = Answer(day1="Dzień 5, "+form.answer.data, author=current_user)
+        answer = Answer(day1="Dzień 5: "+form.answer.data, author=current_user)
         db.session.add(answer)
         db.session.commit()
         message = "Odpowiedz została wysłana!"
@@ -101,7 +101,7 @@ def day6():
     message=None
     form = AnswerForm()
     if form.validate_on_submit():
-        answer = Answer(day1="Dzień 6, "+form.answer.data, author=current_user)
+        answer = Answer(day1="Dzień 6: "+form.answer.data, author=current_user)
         db.session.add(answer)
         db.session.commit()
         message = "Odpowiedz została wysłana!"
@@ -113,7 +113,7 @@ def day7():
     message=None
     form = AnswerForm()
     if form.validate_on_submit():
-        answer = Answer(day1="Dzień 7, "+form.answer.data, author=current_user)
+        answer = Answer(day1="Dzień 7: "+form.answer.data, author=current_user)
         db.session.add(answer)
         db.session.commit()
         message = "Odpowiedz została wysłana!"
@@ -123,11 +123,11 @@ def day7():
 
 ############## ADMIN PAGE ########################
 
-@app.route('/admin',methods=['GET','POST'])
+@app.route('/admin2551',methods=['GET','POST'])
 def admin():
     return render_template('admin.html')
 
-@app.route('/add',methods=['GET','POST'])
+@app.route('/add2551',methods=['GET','POST'])
 def add():
     error="Pomyślnie dodano uzytkownika"
     form = RegistrationForm()
@@ -138,7 +138,7 @@ def add():
         return render_template('add.html',form=form,error=error)
     return render_template('add.html',form=form)
 
-@app.route('/delete', methods=['GET','POST'])
+@app.route('/delete2551', methods=['GET','POST'])
 def delete():
     form = DeleteForm()
     error = None
@@ -154,7 +154,7 @@ def delete():
     return render_template('delete.html',form=form)
 
 
-@app.route('/users',methods =["GET"])
+@app.route('/users2551',methods =["GET"])
 def users():
     users = User.query.all()
     '''
