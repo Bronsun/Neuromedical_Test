@@ -89,20 +89,22 @@ body{
 }
 @media(max-width: 1024px)
 {
-    *{
+    *:hover{
         cursor:none;
     }
     .top{
-        max-width: 90%;
+        max-width: 100%;
         margin-top: 4vh;
     }
     .top h1{
         margin-bottom: 2vh;
+        font-size:3vh;
     }
     .instruction{
         padding: 2vh;
-        transform: translateX(5%);
+        transform: translateX(0%);
         width:90%;
+        margin: auto;
         -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
         -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
         box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
