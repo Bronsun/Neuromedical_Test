@@ -31,10 +31,12 @@
     </div>
     </form>
     <a href="/main"><button id="startbtn">Wróć na stronę główną</button></a>
-    <div id="prompt" ><input id="mathanswer" placeholder="Wprowadz rozwiązanie "><button id="okbtn" onclick='callInterval()'">OK</button></div>
+    <div id="prompt" ><input id="mathanswer" placeholder="Wprowadz rozwiązanie", value="", onfocus="this.value=''"><button id="okbtn" onclick='callInterval()'">OK</button></div>
 </div>  
 <script>
-var arr = ["Kot","Pies","Samochód","Wypadek","Miłość","Jedzenie","Element","12*5","14+5","255+9"]; 
+var words = ["PIŁKA","OWOC","LÓD","FUTRO","KOZA","ŁUK","NOGA","OPERA","POLE","TAJFUN","SIEĆ","WILK","ZĄB","SOK","KUCHARZ"]; 
+var math_questions=["3%*100=","2+7=","12-1=","3*3=","0*5="]
+var arr = words.concat(math_questions)
 var i = 0;
 var interval = 3000
 var form = document.getElementById('form')
@@ -42,6 +44,7 @@ var submit = document.getElementById('subbtn')
 var test =document.getElementById('test')
 var ok = document.getElementById('okbtn')
 var prompt = document.getElementById("prompt")
+var startbtn = document.getElementById("startbtn")
 form.style.display="none"
 submit.style.display="none"
 
@@ -49,7 +52,7 @@ function callInterval() {
 // set a variable for setInterval
 	var time = setInterval(()=>{
 		test.innerHTML=arr[i];
-        if (i > 7){
+        if (i > words.length - 1){
             
             interval=300;
             this.clearInterval(time);
@@ -71,7 +74,6 @@ function callInterval() {
     
 }
 var count = 4;
-var startbtn = document.getElementById("startbtn")
 
 function anim() {
     if (count > 0) {

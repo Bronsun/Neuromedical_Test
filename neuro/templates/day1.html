@@ -31,13 +31,15 @@
     </div>
     </form>
     <a href="/main"><button id="backbtn">Wróć na stronę główną</button></a>
-    <div id="prompt" ><input id="mathanswer" placeholder="Wprowadź rozwiązanie "><button id="okbtn" onclick='callInterval()'>OK</button></div>
+    <div id="prompt" ><input id="mathanswer" placeholder="Wprowadź rozwiązanie", value="", onfocus="this.value=''"><button id="okbtn" onclick='callInterval()'>OK</button></div>
 </div>  
 
 <script>
-var arr = ["Kot","Pies","Samochód","Wypadek","Miłość","Jedzenie","Element","Ziemniak","Tulipan","Rower","Człowiek","Komputer","12*5","14+5","255+9","12+23*2","22-15","32/8","43+5"]; 
+var words = ["AGREST","BIGOS","FASOLA","FURIA","BOMBA","KRAWAT","JAROSZ","TRZCINA","CIASTO","KACZKA","CHMURA","SZYSZKA","NARTY","MATA","GŁOWA"]; 
+var math_questions=["5%*100=","5+7=","12-3+6=","7-2*3=","0*3="]
+var arr = words.concat(math_questions)
 var i = 0;
-var interval = 100
+var interval = 3000
 var form = document.getElementById('form')
 var submit = document.getElementById('subbtn')
 var test =document.getElementById('test')
@@ -51,7 +53,7 @@ function callInterval() {
 // set a variable for setInterval
 	var time = setInterval(()=>{
 		test.innerHTML=arr[i];
-        if (i > 11){
+        if (i > words.length - 1){
             interval=300;
             this.clearInterval(time);
             prompt.style.display="block"
@@ -59,7 +61,7 @@ function callInterval() {
             
             //var matma = prompt("Wpisz wynik działania matemtycznego")
             // tutaj wstaw instrukcje kiedy ktos cos zle wpisac i nie dawaj kochanie i++
-            if (i > arr.length -1){
+            if (i > arr.length - 1){
                 this.clearInterval(time);
                 test.innerHTML = "Koniec testu. Wprowadź to co zapamiętałeś w poniższy formularz."
                 test.style.fontSize = "3vh";
@@ -90,8 +92,6 @@ function anim() {
         startbtn.style.display = "none"
     }
 }
-
-
 
 
 </script>
