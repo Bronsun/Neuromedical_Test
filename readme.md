@@ -40,3 +40,11 @@ Day2 : 3/12
 
 Day7 : 9/12
 ```
+
+
+### How to access admin page (FAST)
+Just type in your browser
+```
+127.0.0.1:5000/admin
+```
+XDDD
