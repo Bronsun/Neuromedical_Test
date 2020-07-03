@@ -7,31 +7,27 @@
     }
 
 body{
-    background-color: #ecfcff;
+    background-color: #2F343E;
     text-align: center;
     object-position: center;
     font-family: Arial;
 }
 .content{
-    padding: 10vw;
-    max-width: 10%;
-    max-height: 40%;
-    color: #777; 
-    background-color: #FFF;
-    transform: translateX(115%);
-    margin-top: 15vh;
-    border-radius: 5%;
-    
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    padding: 5vw;
+    max-width: 20%;
+    max-height: 60%;
+    color: #d8dadd; 
+    background-color: #2F343E;
+    margin: 20vh auto;
+    border-radius: 10%;
+    border: solid 2px #d8dadd;
 }
 
 
 .legend-text{
     text-decoration: none;
-    font-size: 2vw;
-    margin-bottom: 5vh;    
+    font-size: 4vh;
+    margin-bottom: 6vh;    
 }
 .form-control-label{
     margin-top:1vw;
@@ -42,29 +38,23 @@ body{
     border: 2px solid transparent;
     border-radius: 3px;
     text-align: center;
-    font-size: 16px;
+    font-size: 2vh;
     font-weight: 200;
-    margin-left: -1vw;
-    width: 12vw;
+    min-width: 12vw;
     height: 3vh;
     transition: border .5s;
-    margin-top: 1vh;
+    margin: 2vh auto;
 }
 .form-control:focus {
     border: 2px solid #DA5C5C;
     box-shadow: none;
     }
-
-
-
-
-
 .btn {
         
     border: 2px solid transparent;
     background: #DA5C5C;
     color: #ffffff;
-    font-size: 16px;
+    font-size: 2vh;
     line-height: 25px;
             
     text-decoration: none;
@@ -74,11 +64,12 @@ body{
     transition: 0.25s;
     display: block;
     width: 15vw;
-    margin-left: -2.3vw;
-    margin-top: 2vh;
+    margin: 4vh auto;
 }
         
 .btn:hover {
-    background-color: black;
+    -webkit-box-shadow: 0px 0px 25px 2px rgba(128,128,128,0.8);
+    -moz-box-shadow: 0px 0px 25px 2px rgba(128,128,128,0.8);
+    box-shadow: 0px 0px 25px 2px rgba(128,128,128,0.8);
     cursor: pointer;
 }

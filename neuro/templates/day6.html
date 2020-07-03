@@ -59,6 +59,8 @@ function callInterval() {
             if (i > arr.length -1){
                 this.clearInterval(time);
                 test.innerHTML = "Koniec testu. Wprowadz to co zapamiętałeś w ponizszy formularz."
+                test.style.fontSize = "3vh";
+                test.style.padding = " 4vh auto";
                 form.style.display="unset"
                 submit.style.display = "unset"  
                 prompt.style.display="block"

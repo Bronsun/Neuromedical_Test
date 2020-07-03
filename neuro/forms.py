@@ -12,7 +12,7 @@ class RegistrationForm(FlaskForm):
     def validate_username(self,username):
         user = User.query.filter_by(username=username.data).all()
         if user:
-            raise ValidationError('Pacjent juz został dodany.')
+            raise ValidationError('Pacjent już został dodany.')
 
 class LoginForm(FlaskForm):
     username = StringField('Nazwa użytkownika', validators=[DataRequired()])
@@ -25,7 +25,7 @@ class AnswerForm(FlaskForm):
 
 class DeleteForm(FlaskForm):
     username = StringField('Nazwa użytkownika', validators=[DataRequired(),Length(min=2,max=20)])
-    confirm_username = StringField('Powtórz nazwe', validators=[DataRequired(),EqualTo('username')])
+    confirm_username = StringField('Powtórz nazwę', validators=[DataRequired(),EqualTo('username')])
     submit = SubmitField('Usuń użytkownika')
 
   

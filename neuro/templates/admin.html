@@ -7,20 +7,13 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='admin.css') }}">
 </head>
 <body>
-      
-        <div class="container">
-          <div class='elements'>
-          <a href="/users">Pacjenci</a>
-          </div>
-          <div class='elements'>
-          <a href="/add">Dodaj użytkownika</a>
-          </div>
-          <div class='elements'>
-          <a href="/delete">Usuń użytkownika</a>
-          </div>
-          <div class='elements'>
-          <a href="/login">Wyloguj się</a>
-          </div>
+      <div id="menuwrapper">
+        <div id="container">
+          <a href="/users" class='elements'>Pacjenci</a>
+          <a href="/add" class='elements'>Dodaj użytkownika</a>
+          <a href="/delete" class='elements'>Usuń użytkownika</a>
+          <a href="/login" class='elements'>Wyloguj się</a>
+        </div>
         </div>
           
    {% block content %}{% endblock %}
