@@ -157,7 +157,7 @@ def delete():
 @app.route('/users',methods =["GET"])
 def users():
     users = User.query.all()
-    
+    '''
     for user in users:
         x = user.answers
         for answer in x:
@@ -173,11 +173,10 @@ def users():
             elif (answer_arry[0]=="Dzień 2"):
                 a = set(answer_arry)
                 b = set(correctDay1)
-                result2 = len(a&b)
-                
-    
+                result2 = len(a&b)           
+    '''
 
-    return render_template('users.html',users=users,result1=result1)
+    return render_template('users.html',users=users)#result1=result1)
 
 
 ######## LOGOUT ###########
