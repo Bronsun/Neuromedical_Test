@@ -104,8 +104,12 @@ body{
     text-align: center;
    
 }
-#mathanswer:hover, #form:hover{
+#mathanswer:focus, #form:focus{
     border: 2px solid #DA5C5C;
     box-shadow: none;
 }
 
+.mess_sent{
+    color: #d8dadd;
+    font-size: 4vh;
+}

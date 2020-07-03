@@ -43,6 +43,7 @@ var submit = document.getElementById('subbtn')
 var test =document.getElementById('test')
 var ok = document.getElementById('okbtn')
 var prompt = document.getElementById("prompt")
+var startbtn = document.getElementById("startbtn")
 form.style.display="none"
 submit.style.display="none"
 
@@ -63,9 +64,9 @@ function callInterval() {
                 test.innerHTML = "Koniec testu. Wprowadź to co zapamiętałeś w poniższy formularz."
                 test.style.fontSize = "3vh";
                 test.style.padding = " 4vh auto";
-                form.style.display ="unset"
-                submit.style.display = "unset"
-                prompt.style.display="none"  
+                form.style.display ="unset";
+                submit.style.display = "unset";
+                prompt.style.display="none"; 
             } 
         }
         i++;
@@ -73,7 +74,6 @@ function callInterval() {
     
 }
 var count = 4;
-var startbtn = document.getElementById("startbtn")
 
 function anim() {
     if (count > 0) {
