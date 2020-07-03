@@ -40,12 +40,20 @@ def main():
 def day1():
     message=None
     form = AnswerForm()
+    correctDay1 = ["AGREST","BIGOS","FASOLA","FURIA","BOMBA","KRAWAT","JAROSZ","TRZCINA","CIASTO","KACZKA","CHMURA","SZYSZKA","NARTY","MATA","GŁOWA"]
     if form.validate_on_submit():
-        answer = Answer(day1="Dzień 1: "+form.answer.data, author=current_user)
+        answers=form.answer.data
+        answer_arry=answers.split(",")
+        a = set(correctDay1)
+        b = set(answer_arry)
+        score=str(len(a&b))
+        print(score)
+        answer = Answer(day1="Dzień 1: "+form.answer.data+ ""+score+"/15", author=current_user)
         db.session.add(answer)
         db.session.commit()
         message = "Odpowiedz została wysłana!"
     return render_template('day1.html',form=form,message=message)
+
 
 @app.route('/day2',methods=['POST','GET'])
 @login_required
