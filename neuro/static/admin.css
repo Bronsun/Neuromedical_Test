@@ -160,4 +160,8 @@ body{
     .daynumbers{
         grid-row: 1/span 1;
     }
+    .mess_sent{
+        color: #d8dadd;
+        font-size: 4vh;
+    }
     

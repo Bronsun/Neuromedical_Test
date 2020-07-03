@@ -87,3 +87,55 @@ body{
     background-color:  #DA5C5C;
     margin-bottom: 5vh;
 }
+@media(max-width: 1024px)
+{
+    *{
+        cursor:none;
+    }
+    .top{
+        max-width: 90%;
+        margin-top: 4vh;
+    }
+    .top h1{
+        margin-bottom: 2vh;
+    }
+    .instruction{
+        padding: 2vh;
+        transform: translateX(5%);
+        width:90%;
+        -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+    }
+    .instruction p{
+        font-size: 2.2vh;
+    }
+    .days{
+        margin: 2vh 5%;
+        width: 90%;
+        grid-template-rows: 7;
+        grid-template-columns: 1fr;
+        
+    }
+    .day{
+        padding-top: 5vh;
+        height: 20vh;
+        width: 90%;
+        margin:2vh auto;
+        font-size: 3vh;
+        -webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+    }
+    .btn{
+        font-size: 3vh;
+    }
+    .logoutbtn input{
+        width: 40vw;
+        height: 6vh;
+        font-size: 3vh;
+        background-color:  #DA5C5C;
+        margin-bottom: 5vh;
+    }
+
+}
