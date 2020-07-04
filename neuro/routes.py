@@ -40,6 +40,8 @@ def main():
 def day1():
     message=None
     form = AnswerForm()
+    ## Tutaj znajduje się system score. Zmienna score to wynik jaki uzyskal pacjent. Jak widac jest to zwykla porownywarka tablic xDDDDD 
+    correctDay1 = ["AGREST","BIGOS","FASOLA","FURIA","BOMBA","KRAWAT","JAROSZ","TRZCINA","CIASTO","KACZKA","CHMURA","SZYSZKA","NARTY","MATA","GŁOWA"]
     if form.validate_on_submit():
         answers=form.answer.data
         answer_arry=answers.split(",")
