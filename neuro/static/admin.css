@@ -94,147 +94,147 @@ body{
     box-shadow: none;
     }
 
+.btn {        
+    border: 2px solid transparent;
+    background: #DA5C5C;
+    color: #ffffff;
+    font-size: 2vh;
+    line-height: 25px;       
+    text-decoration: none;
+    text-shadow: none;
+    border-radius: 3px;
+    box-shadow: none;
+    transition: 0.25s;
+    display: block;
+    width: 15vw;
+    margin: 5vh auto;
+}    
+.btn:hover {
+    cursor: pointer;
+    -webkit-box-shadow: 0px 0px 25px 2px rgba(128,128,128,0.8);
+    -moz-box-shadow: 0px 0px 25px 2px rgba(128,128,128,0.8);
+    box-shadow: 0px 0px 25px 2px rgba(128,128,128,0.8);
+}
+.contentUsers{
+    max-width: 60%;
+    padding: 3vw;
+    margin: 4vh auto;
+    transform: translate(0, 5vh);
+    background-color: #d8dadd;
+    border-radius: 10px;
+    overflow-x: scroll;
+}
+.Userbox{
+    font-size: 1.5vw;
+    font-weight: 600;
+    padding: 1vw;
+    width: 60%;
+    margin: -1vh auto 1vh;
+    height: 5vh;
+}
+#login{
+    float: left;
+}
+.passwordUser{
+    float: right;
+}
+.AnswersDays{
+    font-weight: 700;
+}
+.answers{
+    font-weight: 300 !important;
+    padding: 1vw;
+    font-size: 2vh;
+}
+.correct{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr  ;
+    grid-template-rows: 1fr 1fr;
+    font-weight: 700;
+}
+.daynumbers{
+    grid-row: 1/span 1;
+    width: 8vw;
+    text-align: center;
+}
+.points{
+    grid-row: 2/span 1;
+    width: 8vw;
+    text-align: center;
+}
+.mess_sent{
+    color: #d8dadd;
+    font-size: 4vh;
+}
+@media(max-width: 1024px)
+{
+    *:hover{
+        cursor:none;
+    }
+    #menuwrapper{
+        width:100%;
+        height:10vh;
+    }
+    #container{
+        width:100%;
+        height:10vh; 
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    .elements{
+        font-size: 4vw;
+        padding-top: 2vh;
+    }
+    .elements:hover::before, .elements:hover::after{
+        height: 0px;
+        width: 0vw;
+        border-top-color:transparent;
+    }
+    .content{
+        min-width: 80%;
+        min-height: 60%;
+        margin: 20vh auto auto;
+        padding: 5vw;           
+    }
+    .form-control{
+        width: 60vw;
+        height: 4vh;
+    }
     .btn {
-        
-        border: 2px solid transparent;
-        background: #DA5C5C;
-        color: #ffffff;
-        font-size: 2vh;
-        line-height: 25px;
-                
-        text-decoration: none;
-        text-shadow: none;
-        border-radius: 3px;
-        box-shadow: none;
-        transition: 0.25s;
-        display: block;
-        width: 15vw;
+        font-size: 3vh;
+        width: 70vw;
+        height: 6vh;
         margin: 5vh auto;
     }
-            
-    .btn:hover {
-        cursor: pointer;
-        -webkit-box-shadow: 0px 0px 25px 2px rgba(128,128,128,0.8);
-        -moz-box-shadow: 0px 0px 25px 2px rgba(128,128,128,0.8);
-        box-shadow: 0px 0px 25px 2px rgba(128,128,128,0.8);
-    }
-
     .contentUsers{
-        max-width: 60%;
-        padding: 3vw;
-        margin: 4vh auto;
-        transform: translate(0, 5vh);
-        background-color: #d8dadd;
-        border-radius: 10px;
-       
+        min-width: 90%;
+        margin: 2vh auto;
+        transform: translate(0, 2vh);
     }
     .Userbox{
-        display: grid;
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-        font-size: 1.5vw;
-        font-weight: 700;
-        
-        text-align: center;
-        padding: 10px;
+        font-size: 2.2vh;
+        width: 80%;
+        margin: 1vh auto;
     }
     .AnswersDays{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        font-weight: 700;
-        
+        font-size: 2vh;
     }
     .answers{
-        font-weight: 300 !important;
-        padding: 10px;
+        font-size: 1.8vh;
     }
-
     .correct{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr  ;
-        grid-template-rows: 1fr 1fr;
-        font-weight: 700;
+        font-size:1.8vh;
     }
     .daynumbers{
-        grid-row: 1/span 1;
+        width: 12vw;
+        text-align: center;
+    }
+    .points{
+        width: 12vw;
+        text-align: center;
     }
     .mess_sent{
-        color: #d8dadd;
-        font-size: 4vh;
+        font-size: 3vh;
     }
-    @media(max-width: 1024px)
-    {
-        *:hover{
-            cursor:none;
-        }
-        #menuwrapper{
-            width:100%;
-            height:10vh;
-        }
-        #container{
-            width:100%;
-            height:10vh; 
-            margin-left: 0%;
-            margin-right: 0%;
-        }
-        .elements{
-            font-size: 4vw;
-            padding-top: 2vh;
-        }
-        .elements:hover::before, .elements:hover::after{
-            height: 0px;
-            width: 0vw;
-            border-top-color:transparent;
-        }
-        .content{
-            min-width: 80%;
-            min-height: 60%;
-            margin: 20vh auto auto;
-            padding: 5vw;           
-        }
-        .form-control{
-            width: 60vw;
-            height: 4vh;
-        }
-            .btn {
-                font-size: 3vh;
-                width: 70vw;
-                height: 6vh;
-                margin: 5vh auto;
-            }
-            .contentUsers{
-                min-width: 90%;
-                margin: 2vh auto;
-                transform: translate(0, 2vh);
-            }
-            .Userbox{
-                display: grid;
-                grid-template-rows: 1fr 1fr;
-                grid-template-columns: 1fr 1fr;
-                font-size: 2vh;
-            }
-            .AnswersDays{
-                display: grid;
-                grid-template-columns: 1fr;
-                grid-template-rows: auto;
-                font-weight: 700;
-            }
-            .answers{
-                font-weight: 300 !important;
-                padding: 10px;
-            }
-            .correct{
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr  ;
-                grid-template-rows: 1fr 1fr;
-                font-weight: 700;
-            }
-            .daynumbers{
-                grid-row: 1/span 1;
-            }
-            .mess_sent{
-                font-size: 3vh;
-            }
-    }
+}
     
