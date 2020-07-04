@@ -14,38 +14,7 @@
             <li id="answer">{{ answer.day1}} </li>
         {% endfor %}
         </ul> </div> </div>
-        <div class="correct">
-        <div class="daynumbers">Day 1:</div>
-        {% for answer in user.answers %}
-        <div class="points">{{ result1 }}/12</div>
-        {%endfor%}
-        <!---
- 
-        {% if result1 %}
-        <div class="points">{{ result1 }}/12</div>
-        {%endif%}
-        <div class="daynumbers">Day 3:</div>
-        {% if result1 %}
-        <div class="points">{{ result1 }}/12</div>
-        {%endif%}
-        <div class="daynumbers">Day 4:</div>
-        {% if result1 %}
-        <div class="points">{{ result1 }}/12</div>
-        {%endif%}
-        <div class="daynumbers">Day 5:</div>
-        {% if result1 %}
-        <div class="points">{{ result1 }}/12</div>
-        {%endif%}
-        <div class="daynumbers">Day 6:</div>
-        {% if result1 %}
-        <div class="points">{{ result1 }}/12</div>
-        {%endif%}
-        <div class="daynumbers">Day 7:</div>
-        {% if result1 %}
-        <div class="points">{{ result1 }}/12</div>
-        {%endif%}-->
-    </div>
-    
+        
    
 </div>
 <script src="{{url_for('static', filename='correct.js')}}"></script>
