@@ -199,25 +199,6 @@ def delete():
 @app.route('/users2551',methods =["GET"])
 def users():
     users = User.query.all()
-    '''
-    for user in users:
-        x = user.answers
-        for answer in x:
-            useranswer=(answer.day1)
-            answer_arry=useranswer.split(",")
-            
-            if (answer_arry[0]=="Dzień 1"):
-                correctDay1 = [" xdd","ziemniak","polonez","gitara","samochód","melanz"]    
-                a = set(answer_arry)
-                b = set(correctDay1)
-                result1=len(a&b)
-                
-            elif (answer_arry[0]=="Dzień 2"):
-                a = set(answer_arry)
-                b = set(correctDay1)
-                result2 = len(a&b)           
-    '''
-
     return render_template('users.html',users=users)#result1=result1)
 
 
