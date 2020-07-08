@@ -125,7 +125,7 @@ body{
     overflow-x: scroll;
 }
 .Userbox{
-    font-size: 1.5vw;
+    font-size: 1vw;
     font-weight: 600;
     padding: 1vw;
     width: 60%;
@@ -134,9 +134,15 @@ body{
 }
 #login{
     float: left;
+    color:green;
 }
 .passwordUser{
     float: right;
+    color:red;
+}
+.emailUser{
+    float:right;
+    padding-right: 2.5vw;
 }
 .AnswersDays{
     font-weight: 700;
@@ -168,9 +174,7 @@ body{
 }
 @media(max-width: 1024px)
 {
-    *:hover{
-        cursor:none;
-    }
+  
     #menuwrapper{
         width:100%;
         height:10vh;

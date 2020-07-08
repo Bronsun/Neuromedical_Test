@@ -5,7 +5,8 @@
 <div class="contentUsers">
     <div class="Userbox">       
     <div id="login">Login: {{user.username}}</div>
-    <div class="passwordUser"> Hasło: {{user.password}}</div> 
+    <div class="passwordUser"> Hasło: {{user.password}}</div>
+    <div class="emailUser">Kontakt: {{user.email}}</div> 
     </div>
     <div class="AnswersDays">Odpowiedzi:    
     <div class="answers">
@@ -15,9 +16,8 @@
         {% endfor %}
         </ul> </div> </div>
         <div class="correct">
-        <div class="daynumbers">Day 1:</div>
         {% for answer in user.answers %}
-        <div class="points">{{ result1 }}/12</div>
+        <div class="points">{{ answer.score }} </div>
         {%endfor%}
         <!---
         <div class="daynumbers">Day 2:</div>

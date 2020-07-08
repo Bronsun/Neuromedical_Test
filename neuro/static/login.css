@@ -71,9 +71,7 @@ body{
 }
 @media (max-width: 1024px)
 {
-    *:hover{
-        cursor:none;
-    }
+    
     .content{
         min-width: 80%;
         border: none;
