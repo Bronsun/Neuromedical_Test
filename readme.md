@@ -26,25 +26,10 @@ It should start on your local server, just type in your browser
 ```
 
 ## Problems
-In admin section we can see all users and theirs answers. We need to make some kind of checker which will show which anserws are correct and demostrate it in form like this:
-```
-Day1 : 7/12
-
-Day2 : 3/12
-
-.
-
-.
-
-.
-
-Day7 : 9/12
-```
+Everything is solved now
 
 
-### How to access admin page (FAST)
-Just type in your browser
-```
-127.0.0.1:5000/admin
-```
-XDDD
+## Link to website
+http://test.neuromedical.pl
+
+## Website is still under development
